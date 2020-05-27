@@ -1,0 +1,19 @@
+{
+  "name": "rnd-kitchen",
+  "version": "1.0.0",
+  "description": "RnD Kitchen Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ffachrial/RnDKitchen.git"
+  },
+  "author": "Firman Fachrial",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ffachrial/RnDKitchen/issues"
+  },
+  "homepage": "https://github.com/ffachrial/RnDKitchen#readme"
+}
