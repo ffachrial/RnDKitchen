@@ -19,7 +19,7 @@ class AppHeader extends HTMLElement {
                 :host {
                     display: block;
                     width: 100%;
-                    background-color: cornflowerblue;
+                    background-color: black;
                     color: white;
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
                 }
