@@ -1,8 +1,13 @@
+const webpack = require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: [
+        "./src/index.js",
+        "./src/scss/app.scss"
+    ],
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js"
@@ -10,14 +15,11 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.(sa|sc|c)ss$/,
                 use: [
-                    {
-                        loader: "style-loader"
-                    },
-                    {
-                        loader: "css-loader"
-                    }
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader"
                 ]
             }
         ]
@@ -26,6 +28,16 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./src/index.html",
             filename: "index.html"
+        }),
+        new MiniCssExtractPlugin({
+            filename: "css/style.css"
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            jquery: "jquery",
+            "window.jQuery": "jquery",
+            Popper: ["popper.js", "default"]
         })
     ]
 }

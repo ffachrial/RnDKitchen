@@ -1,5 +1,4 @@
-import "regenerator-runtime";
-import './styles/style.css';
+import 'regenerator-runtime';
 import './script/component/app-header.js';
 import main from './script/view/main.js';
 

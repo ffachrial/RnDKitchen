@@ -6,13 +6,10 @@ const main = () => {
     const searchElement = document.querySelector("search-item");
     const mealListElement = document.querySelector("meal-List");
 
-    const onButtonSearchClicked = async () => {
-        try{
-            const result = await DataSource.searchMeal(searchElement.value);
-            renderResult(result);
-        } catch (message) {
-            fallbackResult(message)
-        }
+    const onButtonSearchClicked = () => {
+        DataSource.searchMeal(searchElement.value)
+            .then(renderResult)
+            .catch(fallbackResult)
     };
 
     const renderResult = results => {
