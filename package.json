@@ -11,6 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/ffachrial/RnDKitchen.git"
   },
+  "keywords": [
+    "fachrial",
+    "frontend"
+  ],
   "author": "Firman Fachrial",
   "license": "ISC",
   "bugs": {
@@ -20,6 +24,7 @@
   "devDependencies": {
     "@babel/core": "^7.10.0",
     "@babel/preset-env": "^7.10.0",
+    "@udragon/google-fonts-webpack-plugin": "^1.2.5",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.3",
     "html-loader": "^1.1.0",

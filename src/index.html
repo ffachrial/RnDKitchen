@@ -6,15 +6,17 @@
         <title>RnD Kitchen</title>
     </head>
     <body>
-        <header>
-            <app-header></app-header>
-        </header>
-        <div class="jumbotron text-center">
-            <h1>My First Bootstrap Page</h1>
-            <p>Resize this responsive page to see the effect!</p>
-        </div>
-        <main>
+        <nav class="navbar fixed-top navbar-dark bg-dark justify-content-between">
+            <a class="navbar-brand" href="#">RnD Kitchen</a>        
             <search-item></search-item>
+        </nav>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+            <h1 class="display-4">RnD Kitchen</h1>
+              <p class="lead">Cook with Love, Taste colorful</p>
+            </div>
+          </div>
+        <main>
             <meal-list></meal-list>
         </main>
     </body>

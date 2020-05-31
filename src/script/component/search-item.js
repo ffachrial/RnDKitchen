@@ -19,71 +19,24 @@ class SearchItem extends HTMLElement {
     
     render() {
         this.shadowDOM.innerHTML = `
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
             <style>
-                .search-container {
-                    max-width: 800px;
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                    padding: 16px;
-                    border-radius: 5px;
+                .container-local {
                     display: flex;
-                    position: sticky;
-                    top: 10px;
-                    background-color: white;
+                    flex-flow: row wrap;
+                    align-items: center;
                 }
 
-                .search-container > input {
-                    width: 75%;
-                    padding: 16px;
-                    border: 0;
-                    border-bottom: 1px solid black;
-                    font-weight: bold;
-                }
-
-                .search-container > input:focus {
-                    outline: 0;
-                    border-bottom: 2px solid black;
-                }
-
-                .search-container > input:focus::placeholder {
-                    font-weight: bold;
-                }
-
-                .search-container >  input::placeholder {
-                    color: black;
-                    font-weight: normal;
-                }
-
-                .search-container > button {
-                    width: 23%;
-                    cursor: pointer;
-                    margin-left: auto;
-                    padding: 16px;
-                    background-color: Black;
-                    color: white;
-                    border: 0;
-                    text-transform: uppercase;
-                }
-
-                @media screen and (max-width: 550px){
-                    .search-container {
-                        flex-direction: column;
-                        position: static;
-                    }
-
-                    .search-container > input {
-                        width: 100%;
-                        margin-bottom: 12px;
-                    }
-
-                    .search-container > button {
-                        width: 100%;
-                    }
+                .container-local > input {
+                    vertical-align: middle;
+                    margin: 5px 10px 5px 0;
+                    width: 70%;
                 }
             </style>
-            <div id="search-container" class="search-container">
-                <input placeholder="Search Food" id="searchElement" type="search">
-                <button id="searchButtonElement" type="submit">Search</button>
-            </div>
+            <div class="container-local">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search Recipe" id="searchElement" aria-label="Search">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" id="searchButtonElement" type="submit">Search</button>
+            </div>        
         `;
         
         this.shadowDOM.querySelector("#searchButtonElement").addEventListener("click", this._clickEvent);
